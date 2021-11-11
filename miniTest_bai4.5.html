@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4.5</title>
+</head>
+<body>
+<input type="text" id="num1" onchange="tinhToan()"> Nhập số a
+<br><br>
+<input type="text" id="num2" onchange="tinhToan()"> Nhập số b
+<br><br>
+<input type="text" id="num3" onchange="tinhToan()"> Nhập số c
+<br><br>
+<p id="result"></p>
+</body>
+<script>
+    function tinhToan() {
+        let a = +document.getElementById("num1").value;
+        let b = +document.getElementById("num2").value;
+        let c = +document.getElementById("num3").value;
+
+        if (a+b>c && b+c>a && c+a>b){
+            if (a == b && b == c){
+                document.getElementById("result").innerText = "3 số tạo nên tam giác đều"
+            } else if (a==b || b==c || c==a){
+                document.getElementById("result").innerText = "3 số tạo nên tam giác cân"
+            } else if ((a*a + b*b == c*c) ||(c*c + b*b == a*a) || (a*a + c*c == b*b)){
+                document.getElementById("result").innerText = "3 số tạo nên tam giác vuông"
+            } else {
+                document.getElementById("result").innerText = "3 số tạo nên tam giác thường"
+            }
+        } else{
+            document.getElementById("result").innerText = "3 số không tạo nên tam giác"
+        }
+    }
+</script>
+</html>

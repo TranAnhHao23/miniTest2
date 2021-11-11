@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4.4</title>
+</head>
+<body>
+    <input type="text" id="num1" onchange="tinhToan()"> Nhập số a
+    <p id="result"></p>
+</body>
+<script>
+    function tinhToan() {
+        let a = +document.getElementById("num1").value;
+        let theKy = Math.floor(a / 100);
+        document.getElementById("result").innerHTML = "Năm " + a + " thuộc thế kỷ thứ " + theKy
+    }
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4.2</title>
+</head>
+<body>
+    <input type="text" id="num1" onchange="tinhToan()"> Nhập số a
+    <br><br>
+    <input type="text" id="num2" onchange="tinhToan()"> Nhập số b
+    <p id="result"></p>
+</body>
+<script>
+    function tinhToan() {
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML =
+            "a^2 = " + a * a + "<br>" + "a^b = " + Math.pow(a, b)
+    }
+</script>
+</html>
